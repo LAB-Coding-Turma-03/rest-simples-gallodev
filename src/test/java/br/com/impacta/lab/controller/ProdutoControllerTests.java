@@ -29,7 +29,7 @@ public class ProdutoControllerTests {
 	public void runProdutosAndResponseAnythingTest() throws Exception {
 		RequestBuilder request = get("/produtos");
 		
-		MvcResult result = mvc.perform(request).andExpect(status().isOk()).andReturn();
+		MvcResult result = mvc.perform(request).andExpect(status().isNotFound()).andReturn();		
 		
 		assertNotNull(result);
 		
